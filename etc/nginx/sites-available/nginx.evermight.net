@@ -1,0 +1,11 @@
+server {
+    listen 80;
+    listen [::]:80;
+
+    server_name nginx.evermight.net;
+        
+    location / {
+        proxy_pass http://apache.evermight.net ;
+        include proxy_params;
+    }
+}
